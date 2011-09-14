@@ -44,7 +44,7 @@ Object.append(Uploader, {
   STATUS_STOPPED: 4,
 
   log: function() {
-    if (window.console && console.info) console.info.apply(console, arguments);
+    if (this.options.verbose && window.console && console.info) console.info.apply(console, arguments);
   },
 
   unitLabels: {
