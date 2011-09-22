@@ -125,6 +125,7 @@ Uploader.Request = new Class({
     if (success.length) this.fireEvent('onSelectSuccess', [success]);
     if (failure.length) this.fireEvent('onSelectFailed', [failure]);
     
+    this.input.value = '';
     if (this.options.instantStart) this.start();
   },
 
