@@ -215,6 +215,7 @@ Uploader.Targeting = new Class({
   
   getBox: function() {
     if (this.box) return this.box;
+    var scroll = window.getScroll();
     this.box = new Element('div').setStyles({
       position: 'absolute',
       opacity: 0.02,
