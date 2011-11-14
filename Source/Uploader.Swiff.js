@@ -15,7 +15,9 @@ license: MIT License
 author: Harald Kirschner <http://digitarald.de>
 ...
 */
-	
+!function() {
+var Uploader = this.Uploader || (this.Uploader = {});
+
 Uploader.Swiff = Swiff.Uploader = new Class({
 
 	Extends: Swiff,
@@ -390,3 +392,5 @@ Swiff.Uploader.File = new Class({
 Swiff.Uploader.condition = function() {
 	return Browser.Plugins.Flash && Browser.Plugins.Flash.version > 8;
 };
+
+}.call(this);

@@ -19,7 +19,6 @@ authors:
 
 !function() {
   
-
 var Uploader = this.Uploader = function(options) {
   options = Object.merge(Uploader.options, options)
   if (!options.adapter) options.adapter = Uploader.getAdapter();

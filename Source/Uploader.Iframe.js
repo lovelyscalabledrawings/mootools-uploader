@@ -16,7 +16,9 @@ author: Harald Kirschner <http://digitarald.de>
 ...
 */
 
-if (!this.Uploader) this.Uploader = {}
+(function() {
+var Uploader = this.Uploader || (this.Uploader = {});
+
 this.Uploader.Iframe = new Class({
 
   Implements: [Options, Events, Uploader.Targeting],
@@ -169,7 +171,7 @@ this.Uploader.Iframe = new Class({
 
 });
 
-Uploader.Iframe.File = new Class({
+this.Uploader.Iframe.File = new Class({
 
   Implements: Uploader.File,
   
@@ -332,3 +334,5 @@ Uploader.Iframe.File = new Class({
 this.Uploader.Iframe.condition = function() {
   return true;
 };
+
+}).call(this);

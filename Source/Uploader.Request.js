@@ -21,7 +21,10 @@ authors:
 ...
 */
 
-Uploader.Request = new Class({
+!function() {
+var Uploader = this.Uploader || (this.Uploader = {});
+
+this.Uploader.Request = new Class({
 
   Implements: [Options, Events, Uploader.Targeting],
 
@@ -352,4 +355,6 @@ Uploader.Request.condition = function() {
         return body;
     }
     w.FormData = FormData;
-})(window);
+})(this);
+
+}.call(this)
