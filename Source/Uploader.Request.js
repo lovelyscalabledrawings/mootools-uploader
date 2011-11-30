@@ -357,4 +357,4 @@ Uploader.Request.condition = function() {
     w.FormData = FormData;
 })(this);
 
-}.call(this)
+}.call(this);
